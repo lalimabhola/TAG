@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 2020_01_13_190602) do
 
+  # Need to enable this extension to support this database
+  enable_extension "plpgsql"
+
   create_table "app_configs", force: :cascade do |t|
     t.string "name"
     t.string "logo_url"
