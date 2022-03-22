@@ -1,3 +1,13 @@
+// Project name: Assignment 2: TAG
+// Description: This website will track donations and related information 
+// to allow nonprofits to better streamline their process of reallocating
+// donations to other distribution centers, who in turn give these 
+// donations to the homeless or those who are unable to afford them.
+// Filename: application.scss
+// Description: This file will add styles for dashboard
+// Last modified on: 3/22/22
+
+
 /*
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
@@ -29,3 +39,34 @@
 // and require_self *cannot* be removed.
 
 // Your code here...
+.bg-TAG {
+    background-color: #0c7bdc !important;
+}
+  
+// getting image link and formatting for background of page
+.bg-image {
+    background-image: url(https://png.pngtree.com/png-clipart/20190515/original/pngtree-flowers-seamless-pattern-with-ladybug-on-soft-green-background-png-image_3726083.jpg);
+    overflow-y: hidden;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+  
+.overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(29, 58, 92, 0.3);
+}
+  
+.dark-overlay {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: rgba(9, 18, 29, 0.7);
+}
