@@ -5,7 +5,7 @@
 // donations to the homeless or those who are unable to afford them.
 // Filename: application.scss
 // Description: This file will add styles for dashboard
-// Last modified on: 3/22/22
+// Last modified on: 3/23/22
 
 
 /*
@@ -38,19 +38,8 @@
 // The comments at the top of the file, specifically require_tree .
 // and require_self *cannot* be removed.
 
-// Your code here...
 .bg-TAG {
     background-color: #0c7bdc !important;
-}
-  
-// getting image link and formatting for background of page
-.bg-image {
-    background-image: url(https://png.pngtree.com/png-clipart/20190515/original/pngtree-flowers-seamless-pattern-with-ladybug-on-soft-green-background-png-image_3726083.jpg);
-    overflow-y: hidden;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
 }
   
 .overlay {

@@ -12,7 +12,12 @@
     <%= javascript_include_tag 'application' %>
     <%# Bootstrap css %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  
+    <%# <link rel="stylesheet" href="/home/student1/vm-csc415/TAG/src/app/assets/stylesheets/application.scss" integrity="" crossorigin="anonymous"> %>
+
+  
   </head>
+
   <body>
     <%# Bootstrap js & dependencies %>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -28,12 +33,19 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
-            <a class="nav-link text-white" href="#">NavLink</a>
+            <a class="nav-link text-white" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Search</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Add</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" href="#">Delete</a>
           </li>
           <li class="nav-item dropdown text-white">
-            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Dropdown
-            </a>
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Dropdown </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
               <a class="dropdown-item" href="#">A Link</a>
               <a class="dropdown-item" href="#">Another Link</a>
@@ -41,6 +53,8 @@
               <a class="dropdown-item" href="#">And Another</a>
             </div>
           </li>
+
+
         </ul>
         <ul class="navbar-nav">
           <%# If user, show account, else sign in %>
@@ -70,9 +84,13 @@
         </ul>
       </div>
     </nav>
+    
+    
     <br>
     <br>
     <br>
+
+
     <div class="container">
       <% if notice %>
         <p class="alert alert-success"><%= notice %></p>
