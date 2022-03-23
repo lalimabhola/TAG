@@ -28,8 +28,7 @@ The three main functions of my program are searching within the data, adding dat
  - **Exceptions:**
 	1. The username is incorrect: upon hitting “login” an error message of “invalid username” is displayed. The system prompts the user to try again.
 	2. The password is incorrect: upon hitting “login” an error message of “invalid password” is displayed. The system prompts the user to try again.
-
-
+----------
  - **Use case:** Search
  - **Primary actor:** General or Admin user
  - **Goal in context:** The user wants to see the number of donations currently stored in the database.
@@ -42,8 +41,7 @@ The three main functions of my program are searching within the data, adding dat
 	4. The user chooses the tags they want to retrieve then hits “submit” and a record of the relevant donations loads onto the page.
 - **Exceptions:**
 	1.  There is no data in the system to be viewed.
-
-
+----------
 - **Use case:** Add data
 - **Primary actor:** Admin user
 - **Goal in context:** To populate the donations database with entries as well as who donated (or if the donor prefers to be anonymous), types of donations, and quantity of donations.
@@ -56,8 +54,7 @@ The three main functions of my program are searching within the data, adding dat
 	4. If the data entered were valid types, then it displays the message “successfully added.” If the data is invalid, then a message is displayed to “enter valid data.”
 - **Exceptions:**
 	1.  If the same entry was entered twice, then do not let the user add it and state “duplicate data, unable to add.”
-
-
+----------
 - **Use case:** Delete data
 - **Primary actor:** Admin user
 - **Goal in context:** To remove an entry from the donation catalog.
