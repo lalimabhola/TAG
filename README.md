@@ -20,9 +20,9 @@ The three main functions of my program are searching within the data, adding dat
 
 ## Use Case Descriptions
 
-![logInAndSearch](https://github.com/lalimabhola/TAG/blob/prototype2/docs/log_in_and_search_use_cases.png)
+![logInAndSearch](https://github.com/lalimabhola/TAG/blob/prototype2/docs/Log_and_search.png)
 
-![AddAndDelete](https://github.com/lalimabhola/TAG/blob/prototype2/docs/Add_and_delete.png)
+![AddAndDelete](https://github.com/lalimabhola/TAG/blob/prototype2/docs/Add_and_delete_data.png)
 
 ## Design Class Diagram
 
