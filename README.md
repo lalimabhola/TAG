@@ -14,6 +14,10 @@ My project is innovative because the [charity in focus/my inspiration](https://w
 
 The three main functions of my program are searching within the data, adding data, and deleting data. My program will take user input and, based on the selected operation, perform one of the three functions on that piece of data. In the instance that a donation was received and workers want to add to the supply, then can select the data from a dropdown menu and the quantity of items to easily add that information. Administrators should be able to add or delete data, whereas general users might benefit the most from viewing the data rather than performing these functions. I will focus on New Jersey as the scope of charities and donation centers for this project. The reason I am focusing the operations performed on the data is because the main goal of my program is to allow workers in nonprofit organizations to track their supply of donations to better redistribute them. 
 
+## Use Case Diagram
+
+![UseCaseDiagram](https://github.com/lalimabhola/TAG/blob/prototype2/diagrams/Use_case_diagram.png)
+
 ## Use Case Descriptions
  - **Use case: Log in** (**note: Devise handles the log in process)
  - **Primary actor:** Admin User
@@ -68,6 +72,18 @@ The three main functions of my program are searching within the data, adding dat
 	5.  The user clicks on the “delete” button which will display a message “Successfully removed from catalog.”
 - **Exceptions:**
 	1.  There is no data in the system to be deleted.
+
+## Design Class Diagram
+
+![Design Class Diagram](https://github.com/lalimabhola/TAG/blob/prototype2/diagrams/Design_class_diagram.png)
+
+## System Sequence Diagrams
+
+![SystemSequenceDiagrams](https://github.com/lalimabhola/TAG/blob/prototype2/diagrams/System_seuqnce_diagrams.png)
+
+## Statechart
+
+![Statechart](https://github.com/lalimabhola/TAG/blob/prototype2/diagrams/State_chart.png)
 
 ### Welcome! To learn how to get started with contributing to this project, visit the resources below. These files can also be found in the `docs/` directory:
 
