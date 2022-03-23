@@ -79,7 +79,7 @@ The three main functions of my program are searching within the data, adding dat
 
 ## System Sequence Diagrams
 
-![SystemSequenceDiagrams](https://github.com/lalimabhola/TAG/blob/prototype2/diagrams/System_seuqnce_diagrams.png)
+![SystemSequenceDiagrams](https://github.com/lalimabhola/TAG/blob/prototype2/diagrams/System_sequence_diagrams.png)
 
 ## Statechart
 
