@@ -14,7 +14,7 @@ My project is innovative because the [charity in focus/my inspiration](https://w
 
 The three main functions of my program are searching within the data, adding data, and deleting data. My program will take user input and, based on the selected operation, perform one of the three functions on that piece of data. In the instance that a donation was received and workers want to add to the supply, then can select the data from a dropdown menu and the quantity of items to easily add that information. Administrators should be able to add or delete data, whereas general users might benefit the most from viewing the data rather than performing these functions. I will focus on New Jersey as the scope of charities and donation centers for this project. The reason I am focusing the operations performed on the data is because the main goal of my program is to allow workers in nonprofit organizations to track their supply of donations to better redistribute them. 
 
-## Use Case Diagrams
+## Use Case Descriptions
  - **Use case: Log in** (**note: Devise handles the log in process)
  - **Primary actor:** Admin User
  - **Goal in context:** To provide access to the system’s capability of modifying data.
