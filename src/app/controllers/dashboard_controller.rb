@@ -7,6 +7,8 @@
 # Description: This file will add the dashboard with eventual functionality
 # Last modified on: 3/22/22
 
+# skip_before_action :authenticate_user!
+
 class DashboardController < ApplicationController
   def dash
   end
