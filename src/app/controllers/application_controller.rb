@@ -21,8 +21,6 @@ class ApplicationController < ActionController::Base
   # See if the current user is logged in
   before_action :authenticate_user!
 
-  # skip_before_action :authenticate_user!
-
   def after_sign_in_path_for(user)
     # your path goes here
     dashboard_dash_path(user)
