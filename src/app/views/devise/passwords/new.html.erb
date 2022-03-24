@@ -1,0 +1,45 @@
+<%# Project name: Assignment 2: TAG %>
+<%# Description: This website will track donations and related information  %>
+<%# to allow nonprofits to better streamline their process of reallocating %>
+<%# donations to other distribution centers, who in turn give these  %>
+<%# donations to the homeless or those who are unable to afford them. %>
+<%# Filename: new.html.erb %>
+<%# Description: This file will include %>
+<%# Last modified on: 3/23/22 %>
+
+
+<body class="bg-image">
+  <div class="overlay">
+    <div class="container mt-4 py-2 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-md-10 col-xl-6">
+          <div class="card bg-dark text-white" style="border-radius: 1rem;">
+            <div class="card-body py-3 px-5 text-center">
+              <div class="mb-md-5 mt-md-4">
+                <h2 class="fw-bold mb-3 text-uppercase">Forgot your password?</h2>
+                <p class="mb-4">If you have an account, we will send a reset password link to your email</p>
+
+                <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do
+                  |f| %>
+                  <%= render "devise/shared/error_messages" , resource: resource %>
+                  <div class="mb-4">
+                    <div class="field bg-dark text-white">
+                      <%= f.label :email, class: "label-font" %><br />
+                        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control form-control-md col-6 m-auto" %>
+                    </div>
+                  </div>
+                    <div class="actions">
+                      <%= f.submit "Reset my password", class: "btn btn-outline-light btn-lg mb-3 w-50" %>
+                    </div>
+                    <% end %>
+                  <div class="link-font">
+                      <%= render "devise/shared/links" %>
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>

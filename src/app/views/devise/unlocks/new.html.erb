@@ -4,21 +4,22 @@
 <%# donations to other distribution centers, who in turn give these  %>
 <%# donations to the homeless or those who are unable to afford them. %>
 <%# Filename: new.html.erb %>
-<%# Description: This file will  %>
+<%# Description: This file will include %>
 <%# Last modified on: 3/23/22 %>
 
-<h2>Resend confirmation instructions</h2>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
+<h2>Resend unlock instructions</h2>
+
+<%= form_for(resource, as: resource_name, url: unlock_path(resource_name), html: { method: :post }) do |f| %>
   <%= render "devise/shared/error_messages", resource: resource %>
 
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email", value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
   </div>
 
   <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
+    <%= f.submit "Resend unlock instructions" %>
   </div>
 <% end %>
 
