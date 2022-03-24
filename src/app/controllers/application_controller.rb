@@ -5,7 +5,7 @@
 # donations to the homeless or those who are unable to afford them.
 # Filename: application_controller.rb
 # Description: This file will add the path for the dashboard after the logging in
-# Last modified on: 3/22/22
+# Last modified on: 3/24/22
 
 # frozen_string_literal: true
 
