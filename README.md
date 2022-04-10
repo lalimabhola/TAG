@@ -36,6 +36,11 @@ The three main functions of my program are searching within the data, adding dat
 
 ![Statechart](https://github.com/lalimabhola/TAG/blob/prototype2/docs/State_chart.png)
 
+
+## Opensource Maintenance and Communication
+
+
+
 ### Welcome! To learn how to get started with contributing to this project, visit the resources below. These files can also be found in the `docs/` directory:
 
 * [Installation Guide](docs/Installation_Guide.md)
