@@ -1,7 +1,7 @@
 # Guidelines for Opensource Maintenance and Communication
 
 ## How to contribute: 
-* Follow the [Installation Guide](https://github.com/lalimabhola/TAG/blob/prototype3/README.md) at the bottom of the README
+* Follow the [Installation Guide](https://github.com/lalimabhola/TAG/blob/prototype3/README.md#welcome-to-learn-how-to-get-started-with-contributing-to-this-project-visit-the-resources-below-these-files-can-also-be-found-in-the-docs-directory) at the bottom of the README
 * Always...
   * follow the specifications listed below for proper code
   * work on a separate branch 
