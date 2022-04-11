@@ -1,7 +1,7 @@
 # Guidelines for Opensource Maintenance and Communication
 
 ## How to contribute: 
-* Follow the Installation Guide at to the bottom of the [README](https://github.com/lalimabhola/TAG/blob/prototype3/README.md)
+* Follow the [Installation Guide](https://github.com/lalimabhola/TAG/blob/prototype3/README.md) at the bottom of the README
 * Always...
   * follow the specifications listed below for proper code
   * work on a separate branch 
@@ -15,7 +15,7 @@
 
 
 ## Where to discuss future plans and communicate with other developers: 
-* Future plans can be communicated in the dicussion board within a Github project. 
+* Future plans can be communicated in the discussion board within a Github project. 
   * [This link has instructions on how to navigate to the discussion board](https://docs.github.com/en/organizations/collaborating-with-your-team/creating-a-team-discussion)
   * Developers should maintain professional language and behavior when using these discussion board
   * Developers should also be considerate and open-minded about other ideas
