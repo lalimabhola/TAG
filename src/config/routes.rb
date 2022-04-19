@@ -1,11 +1,11 @@
-# Project name: Assignment 2: TAG
+# Project name: TAG (Track and Give)
 # Description: This website will track donations and related information 
 # to allow nonprofits to better streamline their process of reallocating
 # donations to other distribution centers, who in turn give these 
 # donations to the homeless or those who are unable to afford them.
 # Filename: routes.rb
-# Description: This file will add the user options to the dashboard/homepage
-# Last modified on: 3/21/22
+# Description: This file will add the user options to the dashboard/dash location
+# Last modified on: 4/19/22
 
 # frozen_string_literal: true
 
@@ -19,8 +19,8 @@ Rails.application.routes.draw do
   get 'dashboard/dash'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
+  # paths for application states
   get 'dashboard/dash'
-  get 'dashboard/view_data'
   get 'dashboard/search_data'
   get 'dashboard/add_data'
   get 'dashboard/delete_data'

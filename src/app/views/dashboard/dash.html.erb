@@ -1,49 +1,43 @@
-<%# Project name: Assignment 2: TAG %>
+<%# Project name: TAG (Track and Give) %>
 <%# Description: This website will track donations and related information  %>
 <%# to allow nonprofits to better streamline their process of reallocating %>
 <%# donations to other distribution centers, who in turn give these  %>
 <%# donations to the homeless or those who are unable to afford them. %>
 <%# Filename: dash.html.erb %>
 <%# Description: This file will include styles for the viewable page after log in & welcome info. This is like a menu page. %>
-<%# Last modified on: 4/18/22 %>
+<%# Last modified on: 4/19/22 %>
  
-    <div class="container mt-5">
-      <h1> Welcome to Track and Give! </h1>
-      <br/>
-      <h2> The purpose of this site is to help track donations and donors to allow nonprofits to better streamline 
-      their process of reallocating donations to other distribution centers, who in turn give these donations to 
-      the homeless or those who are unable to afford them. </h2>
-      
-      <div class="row">
-        <div class="col-lg-3 col-md-3">
-          <div class="dash-box">
-                <h3 style="color:black;" class="text-left"> Search </h3>
-                <br/>
-                <%= link_to 'Choose' , dashboard_search_data_path, class: "dash-box-footer" %>
-          </div>
-        </div>
+<div class="container mt-5">
+  <h1> Welcome to Track and Give! </h1>
+  <br/>
+  <h2> The purpose of this site is to help track donations and donors to allow nonprofits to better streamline 
+    their process of reallocating donations to other distribution centers, who in turn give these donations to 
+    the homeless or those who are unable to afford them. </h2>
 
-        <div class="col-lg-3 col-md-3">
-          <div class="dash-box">
-                <h3 style="color:black;" class="text-left"> View Donations </h3>
-                <br/>
-                <%= link_to 'Choose' , dashboard_view_data_path, class: "dash-box-footer" %>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3">
-          <div class="dash-box">
-                <h3 style="color:black;" class="text-left"> Add Donation </h3>
-                <br/>
-                <%= link_to 'Choose' , dashboard_add_data_path, class: "dash-box-footer" %>
-          </div>
-        </div>
-
-        <div class="col-lg-3 col-md-3">
-          <div class="dash-box">
-                <h3 style="color:black;" class="text-left"> Remove Donation </h3>
-                <br/>
-                <%= link_to 'Choose' , dashboard_delete_data_path, class: "dash-box-footer" %>
-          </div>
-        </div>
+  <div class="row">
+    <div class="col-lg-3 col-md-3">
+      <div class="dash-box">
+        <h3 style="color:black;" class="text-left"> Add Donation </h3>
+        <br/>
+        <%= link_to 'Choose' , dashboard_add_data_path, class: "dash-box-footer" %>
       </div>
+    </div>
+
+    <div class="col-lg-3 col-md-3">
+      <div class="dash-box">
+        <h3 style="color:black;" class="text-left"> View & Search </h3>
+        <br/>
+        <%= link_to 'Choose' , dashboard_search_data_path, class: "dash-box-footer" %>
+      </div>
+    </div>
+
+
+    <div class="col-lg-3 col-md-3">
+      <div class="dash-box">
+        <h3 style="color:black;" class="text-left"> Remove Donation </h3>
+        <br/>
+        <%= link_to 'Choose' , dashboard_delete_data_path, class: "dash-box-footer" %>
+      </div>
+    </div>
+  </div>
+</div>

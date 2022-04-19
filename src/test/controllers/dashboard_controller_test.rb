@@ -1,4 +1,4 @@
-# Project name: Assignment 2: TAG
+# Project name: TAG (Track and Give)
 # Description: This website will track donations and related information 
 # to allow nonprofits to better streamline their process of reallocating
 # donations to other distribution centers, who in turn give these 
