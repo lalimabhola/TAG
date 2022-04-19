@@ -1,3 +1,11 @@
+# Project name: TAG (Track and Give)
+# Description: This website will track donations and related information 
+# to allow nonprofits to better streamline their process of reallocating
+# donations to other distribution centers, who in turn give these
+# donations to the homeless or those who are unable to afford them.
+# Filename: schema.rb
+# 
+# Description: [following lines]
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -7,10 +15,12 @@
 # be faster and is potentially less error prone than running all of your
 # migrations from scratch. Old migrations may fail to apply correctly if those
 # migrations use external dependencies or application code.
-#
+# 
 # It's strongly recommended that you check this file into your version control system.
+# 
+# Last modified on: 4/19/22
 
-ActiveRecord::Schema.define(version: 2020_01_13_190602) do
+ActiveRecord::Schema.define(version: 2022_04_19_041524) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -18,6 +28,17 @@ ActiveRecord::Schema.define(version: 2020_01_13_190602) do
   create_table "app_configs", force: :cascade do |t|
     t.string "name"
     t.string "logo_url"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
+  create_table "donations", force: :cascade do |t|
+    t.string "first_name"
+    t.string "last_name"
+    t.string "email"
+    t.string "donation_item"
+    t.string "donation_type"
+    t.integer "donation_quantity"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

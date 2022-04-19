@@ -1,10 +1,19 @@
+# Project name: TAG (Track and Give)
+# Description: This website will track donations and related information 
+# to allow nonprofits to better streamline their process of reallocating
+# donations to other distribution centers, who in turn give these
+# donations to the homeless or those who are unable to afford them.
+# Filename: seeds.rb
+# Description: This file contains data in db
+# Last modified on: 4/19/22
+
 # frozen_string_literal: true
 
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
 #
 # Examples:
-#
+#s
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
