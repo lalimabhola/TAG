@@ -5,7 +5,7 @@
 <%# donations to the homeless or those who are unable to afford them. %>
 <%# Filename: dash.html.erb %>
 <%# Description: This file will include styles for the viewable page after log in & welcome info. This is like a menu page. %>
-<%# Last modified on: 3/24/22 %>
+<%# Last modified on: 4/18/22 %>
  
     <div class="container mt-5">
       <h1> Welcome to Track and Give! </h1>
@@ -20,6 +20,14 @@
                 <h3 style="color:black;" class="text-left"> Search </h3>
                 <br/>
                 <%= link_to 'Choose' , dashboard_search_data_path, class: "dash-box-footer" %>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-3">
+          <div class="dash-box">
+                <h3 style="color:black;" class="text-left"> View Donations </h3>
+                <br/>
+                <%= link_to 'Choose' , dashboard_view_data_path, class: "dash-box-footer" %>
           </div>
         </div>
 

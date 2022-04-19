@@ -20,6 +20,7 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
 
   get 'dashboard/dash'
+  get 'dashboard/view_data'
   get 'dashboard/search_data'
   get 'dashboard/add_data'
   get 'dashboard/delete_data'
