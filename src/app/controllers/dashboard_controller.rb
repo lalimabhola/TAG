@@ -14,6 +14,8 @@ class DashboardController < ApplicationController
   end
   def add_data
   end
+  def view_data
+  end
   def delete_data
   end
 end

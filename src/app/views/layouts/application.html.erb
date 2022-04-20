@@ -47,15 +47,23 @@
 
           <%# links to the Add donation page %>
           <li class="nav-item">
-          <%= link_to_unless_current("Add", donations_path, { class: "nav-link text-white" }) do %>
-            <a class="nav-link text-white" aria-current="page" href="#">Add</a>
+          <%= link_to_unless_current("View All", donations_path, { class: "nav-link text-white" }) do %>
+            <a class="nav-link text-white" aria-current="page" href="#">View All </a>
           <% end %>
           </li>
 
+          <%# links to the Add donation page %>
+          <li class="nav-item">
+          <%= link_to_unless_current("Add New", new_donation_path, { class: "nav-link text-white" }) do %>
+            <a class="nav-link text-white" aria-current="page" href="#">Add New</a>
+          <% end %>
+          </li>
+
+
           <%# links to the View and Search page %>
           <li class="nav-item">
-          <%= link_to_unless_current("View & Search", searches_path, { class: "nav-link text-white" }) do %>
-            <a class="nav-link text-white" aria-current="page" href="#">View & Search</a>
+          <%= link_to_unless_current("Search", searches_path, { class: "nav-link text-white" }) do %>
+            <a class="nav-link text-white" aria-current="page" href="#">Search</a>
           <% end %>
           </li>
 
