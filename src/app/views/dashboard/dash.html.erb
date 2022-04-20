@@ -15,6 +15,17 @@
     the homeless or those who are unable to afford them. </h2>
 
   <div class="row">
+
+    <%# Button links to View all donations page %>
+    <div class="col-lg-3 col-md-3">
+      <div class="dash-box">
+        <h3 style="color:black;" class="text-left"> <%# View all donations %> </h3>
+        <br/>
+        <%= link_to 'View all Donations' , new_donation_path, class: "dash-box-footer" %>
+      </div>
+    </div>
+
+    <%# Button links to Add new donations page %>
     <div class="col-lg-3 col-md-3">
       <div class="dash-box">
         <h3 style="color:black;" class="text-left"> <%# Add donation %> </h3>
@@ -23,21 +34,23 @@
       </div>
     </div>
 
+    <%# Button links to Search donations page %>
     <div class="col-lg-3 col-md-3">
       <div class="dash-box">
-        <h3 style="color:black;" class="text-left"> <%# Search %> </h3>
+        <h3 style="color:black;" class="text-left"> <%# Search Donations%> </h3>
         <br/>
-        <%= link_to 'View & Search' , dashboard_search_data_path, class: "dash-box-footer" %>
+        <%= link_to 'Search Donations' , dashboard_search_data_path, class: "dash-box-footer" %>
       </div>
     </div>
 
 
-    <div class="col-lg-3 col-md-3">
-      <div class="dash-box">
-        <h3 style="color:black;" class="text-left"> <%# Delete Donation %> </h3>
-        <br/>
-        <%= link_to 'Delete Donation' , dashboard_delete_data_path, class: "dash-box-footer" %>
-      </div>
-    </div>
+    <%# <div class="col-lg-3 col-md-3"> %>
+      <%# <div class="dash-box"> %>
+        <%# <h3 style="color:black;" class="text-left"> Delete Donation </h3> %>
+        <%# <br/> %>
+        <%# <%= link_to 'Delete Donation' , dashboard_delete_data_path, class: "dash-box-footer" %>
+      <%# </div> %>
+    <%# </div> %>
+
   </div>
 </div>

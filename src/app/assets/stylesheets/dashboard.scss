@@ -8,12 +8,12 @@
 // Last modified on: 4/20/22
 
 // Styles related to dashboard controller are here
-// Automatically included in application.css.
+// Automatically included in dashboard.css.
 // Source SASS (SCSS): https://sass-lang.com/
 body {
     // background of each page
     background-color: rgb(236, 255, 237) !important;
-  }
+}
   
 h2{
     margin: auto;
@@ -77,22 +77,26 @@ a {
     font-size: 1.4em;
 }
   
+// controls styles for buttons on home page
 .dash-box .dash-box-footer {
     position: absolute;
-    left: 0;
+    left: 50%;  //50% from the left of the page
+    right: 50%; //50% from the right of the page
     bottom: 0;
     text-align: center;
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.6);
+    background: rgb(12, 123, 220);
     color: #fff;
     width: 100%;
     padding: 4% 0;     //padding of height of buttons on landing page
 }
 
 // controls change in color when hovering
-.dash-box:hover .dash-box-footer {
-    background: rgba(0, 0, 0, 0.8);
+.dash-box:hover .dash-box-footer:hover {
+    background: rgb(2, 51, 93);
     color: #f3f3f3;
+    text-decoration-thickness: 10rem;
+
 }
   
 .mt-10 {

@@ -45,7 +45,7 @@
           <% end %>
           </li>
 
-          <%# links to the Add donation page %>
+          <%# links to the View all donations page %>
           <li class="nav-item">
           <%= link_to_unless_current("View All", donations_path, { class: "nav-link text-white" }) do %>
             <a class="nav-link text-white" aria-current="page" href="#">View All </a>
@@ -62,17 +62,17 @@
 
           <%# links to the View and Search page %>
           <li class="nav-item">
-          <%= link_to_unless_current("Search", searches_path, { class: "nav-link text-white" }) do %>
+          <%= link_to_unless_current("Search Donations", searches_path, { class: "nav-link text-white" }) do %>
             <a class="nav-link text-white" aria-current="page" href="#">Search</a>
           <% end %>
           </li>
 
           <%# links to the Delete donation page %>
-          <li class="nav-item">
-          <%= link_to_unless_current("Delete", dashboard_delete_data_path, { class: "nav-link text-white" }) do %>
-            <a class="nav-link text-white" aria-current="page" href="#">Delete</a>
-          <% end %>
-          </li>
+          <%# <li class="nav-item"> %>
+          <%# <%= link_to_unless_current("Delete", dashboard_delete_data_path, { class: "nav-link text-white" }) do %>
+            <%# <a class="nav-link text-white" aria-current="page" href="#">Delete</a> %>
+          <%# <% end %>
+          <%# </li> %>
 
         </ul>
         <ul class="navbar-nav">

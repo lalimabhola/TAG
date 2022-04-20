@@ -4,7 +4,7 @@
 // donations to other distribution centers, who in turn give these 
 // donations to the homeless or those who are unable to afford them.
 // Filename: application.scss
-// Description: This file will add styles for dashboard
+// Description: This file will add global styles for the application
 // Last modified on: 4/20/22
 
 
@@ -27,11 +27,13 @@
 // Commented out because they refused to behave properly
 // will just use the CDN
 //$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
-//@import '@fortawesome/fontawesome-free/scss/fontawesome';
-//@import '@fortawesome/fontawesome-free/scss/regular';
-//@import '@fortawesome/fontawesome-free/scss/solid';
-//@import '@fortawesome/fontawesome-free/scss/brands';
-//@import 'bootstrap/scss/bootstrap';
+// @import '@fortawesome/fontawesome-free/scss/fontawesome';
+// @import '@fortawesome/fontawesome-free/scss/regular';
+// @import '@fortawesome/fontawesome-free/scss/solid';
+// @import '@fortawesome/fontawesome-free/scss/brands';
+// @import 'bootstrap/scss/bootstrap';
+
+// @import 'font-awesome';
 
 // Add any GLOBAl SCSS/CSS to this file for your project. If it is specific
 // to a page, use the individual SCSS file that is generated for the controller
