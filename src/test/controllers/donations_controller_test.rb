@@ -38,7 +38,7 @@ class DonationsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to donation_url(@donation)
   end
 
-  test "should destroy donation" do
+  test "should delete donation" do
     assert_difference('Donation.count', -1) do
       delete donation_url(@donation)
     end
