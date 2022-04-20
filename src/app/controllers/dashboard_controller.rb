@@ -5,14 +5,12 @@
 # donations to the homeless or those who are unable to afford them.
 # Filename: dashboard_controller.rb
 # Description: This file will add the dashboard with eventual functionality
-# Last modified on: 4/19/22
+# Last modified on: 4/20/22
 
 # skip_before_action :authenticate_user!
 
 class DashboardController < ApplicationController
   def dash
-  end
-  def search_data
   end
   def add_data
   end
