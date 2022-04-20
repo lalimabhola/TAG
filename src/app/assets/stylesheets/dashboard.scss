@@ -31,13 +31,13 @@ a {
     color: #fff;
 }
   
-.container {
-    width:100% !important;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
+// .container {
+//     width:100% !important;
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     margin-right: auto;
+//     margin-left: auto;
+// }
   
 .dash-box {
     position: relative;
@@ -50,33 +50,21 @@ a {
     font-size: 1.5rem;        // font size for buttons on landing page after logging in
 }
   
-.dash-box:hover {
-    text-decoration: none;
-    color: #f3f3f3;
-}
-  
-.dash-box .inner {
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 0;
-}
-  
 // Set values to zero so it doesn't default to auto
-.dash-box h3 {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 4%;
-    white-space: nowrap;
-    padding: 0;
-    font-weight: 750 !important;
-}
+// .dash-box h3 {
+//     margin-top: 0;
+//     margin-left: 0;
+//     margin-right: 0;
+//     margin-bottom: 4%;
+//     white-space: nowrap;
+//     padding: 0;
+//     font-weight: 750 !important;
+// }
   
-.card-box p {
-    font-size: 1.4em;
-}
-  
+// .card-box p {
+//     font-size: 1.4em;
+// }
+
 // controls styles for buttons on home page
 .dash-box .dash-box-footer {
     position: absolute;
@@ -88,20 +76,24 @@ a {
     background: rgb(12, 123, 220);
     color: #fff;
     width: 100%;
-    padding: 4% 0;     //padding of height of buttons on landing page
+
+    //padding of buttons on home page
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-// controls change in color when hovering
+// controls change in buttons on home page when hovering
 .dash-box:hover .dash-box-footer:hover {
     background: rgb(2, 51, 93);
-    color: #f3f3f3;
-    text-decoration-thickness: 10rem;
-
+    color: #bff4ff !important; 
+    padding: 1.5rem;
 }
   
-.mt-10 {
-    margin-top: 10% !important;
-}
+// .mt-10 {
+//     margin-top: 10% !important;
+// }
   
 .outline {
     color: white;
