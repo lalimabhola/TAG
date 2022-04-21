@@ -53,7 +53,7 @@ a {
     bottom: 0;
     text-align: center;
     text-decoration: none;
-    background: rgb(12, 123, 220);
+    background: #199dd6;
     color: #fff;
     width: 100%;
 
@@ -66,7 +66,7 @@ a {
 
 // controls change in buttons on home page when hovering
 .dash-box:hover .dash-box-footer:hover {
-    background: rgb(2, 51, 93);
+    background: rgb(1, 68, 127);
     color: #bff4ff !important; 
     padding: 1.15rem;    //padding upon hover over buttons
 }

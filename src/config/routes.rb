@@ -25,10 +25,13 @@ Rails.application.routes.draw do
 
   # paths for application states
   get 'dashboard/dash'
-  get 'dashboard/search_data'
-  get 'dashboard/add_data'
-  get 'dashboard/delete_data'
+  # get 'dashboard/search_data'
   get 'home/index'
+
+  # helps perform search on donations
+  resources :searches do
+    get "search", on: :collection
+  end
 
   # Devise authentification pages. This controlls the user login
   # and authentification system.

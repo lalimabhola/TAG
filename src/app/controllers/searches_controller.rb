@@ -10,16 +10,15 @@
 class SearchesController < ApplicationController
 
     # listing possible search parameters
-    # def index
-    #   @worklogs = Worklog.accessible_by(current_ability)
-    #   @worklogs = @worklogs.search(params[:query]) unless not params.has_key? :query
-    #   @worklogs = Kaminari.paginate_array(@worklogs).page params[:page]
-    # end
-
-    # # creating a new search
-    # def create
-    #   respond_to do |format|
-    #     format.html { render :index, query: params[:query] }
-    #   end
-    # end
-end 
+    def index
+        # @donations = Donation.accessible_by(current_ability)
+        @donations = @donations.search(params[:query])
+    end
+  
+      # creating a new search
+    def create
+        respond_to do |format|
+            format.html { render :index, query: params[:query] }
+        end
+    end 
+end
