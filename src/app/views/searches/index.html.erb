@@ -18,11 +18,23 @@
     <%# Iterate through the donations and search for specific donation %>
     <%= form_tag searches_path, method: :get do |f| %>
       <div class="input-group input-group-lg">
-        <%= text_field_tag :query, params[:query], placeholder: "Type here to search", class: "form-control input-lg" %>
+        <%= text_field_tag :first_name, params[:first_name], placeholder: "Type here to search", class: "form-control input-lg" %>
         <%= submit_tag "Search", class: "btn btn-primary" %>
       </div>
     <%end%>
     
+    <h3> Test search bar:</h3>
+    <%= form_tag(searches_path, method: :get) do%>
+      <%= text_field_tag(:search, params[:search])%>
+      <%= submit_tag ("Search")%>
+    <%end%>
+
+    <%= @donations.each do |donation| %>
+      <ul>
+        <li><%= link_to donation.first_name, donation_path(donation) %>
+      </ul>
+    <% end %>
+
     </section>
     <br>
     <hr>
