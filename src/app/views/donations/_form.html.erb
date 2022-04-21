@@ -16,6 +16,8 @@
       <div class="field_label1">   <%# manages the specific label for each box %>
         <%= form.label :first_name %>
       </div>
+      <%# use placeholders to demonstrate sample query %>
+      <%# use required = true to require all boxes to be filled %>
       <%= form.text_field :first_name, required: true, autofocus: true, placeholder: "ex. Jane" %>
     </div>
 
@@ -35,24 +37,27 @@
 
     <div class="field">
       <div class="field_label4">
-        <%= form.label :donation_item %>
+        <%= form.label :donation_item, 'Donation' %>
       </div>
-      <%= form.text_field :donation_item, required: true, autofocus: true, placeholder: "ex. Hats"  %>
+      <%= form.text_field :donation_item, required: true, autofocus: true, placeholder: "ex. Hats" %>
     </div>
 
     <div class="field">
       <div class="field_label5">
-        <%= form.label :donation_type, 'Donation' %>
+        <%= form.label :donation_type, 'Type of Item(s)' %>
       </div>
-      <%= form.select(:donation_type, Donation.all.collect { |d| [d.donation_item] }) %>
-      <%# <%= form.text_field :donation_type %>
+      <%# create dropdown menu %>
+      <div class="drop-down">
+        <%= form.select(:donation_type, options_for_select([['Clothing', 'Clothing'], ['Food', 'Food'], ['Books', 'Books'], ['Toiletries', 'Toiletries'], ['Baby Items', 'Baby Items'], ['Pet Items', 'Pet Items'], ['Other', 'Other']])) %>
+      </div>
+
     </div>
 
     <div class="field">
       <div class="field_label6">
-        <%= form.label :donation_quantity %>
+        <%= form.label :donation_quantity, 'Quantity' %>
       </div>
-      <%= form.number_field :donation_quantity, required: true, autofocus: true, placeholder: "ex. 5"  %>
+      <%= form.number_field :donation_quantity, required: true, autofocus: true, placeholder: "ex. 5" %>
     </div>
   </div>
 
