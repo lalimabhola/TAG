@@ -8,10 +8,6 @@
 # Last modified on: 4/21/22
 
 class Donation < ApplicationRecord
-    belongs_to :user
-    belongs_to :donation
-    # belongs_to :entered_by, optional: true
-  
   
     class << self
         def search(query)
