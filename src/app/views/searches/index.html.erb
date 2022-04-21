@@ -5,7 +5,7 @@
 <%# donations to the homeless or those who are unable to afford them. %>
 <%# Filename: index.html.erb %>
 <%# Description: This file will include functions for the search page %>
-<%# Last modified on: 4/20/22 %>
+<%# Last modified on: 4/21/22 %>
 
 <div class="row">
   <div class="col text-center">   <%# center text %>
@@ -16,48 +16,40 @@
     <section class="search-form">
 
     <%# Iterate through the donations and search for specific donation %>
-    <%= form_tag searches_path, method: :get do |f| %>
-      <div class="input-group input-group-lg">
-        <%= text_field_tag :first_name, params[:first_name], placeholder: "Type here to search", class: "form-control input-lg" %>
-        <%= submit_tag "Search", class: "btn btn-primary" %>
-      </div>
-    <%end%>
-    
-    <h3> Test search bar:</h3>
-    <%= form_tag(searches_path, method: :get) do%>
-      <%= text_field_tag(:search, params[:search])%>
-      <%= submit_tag ("Search")%>
-    <%end%>
-
-    <%= @donations.each do |donation| %>
-      <ul>
-        <li><%= link_to donation.first_name, donation_path(donation) %>
-      </ul>
-    <% end %>
-
-    </section>
+      <section class="search-form">
+        <%= form_for :donations, method: :get do |f| %>
+          <div class="input-group input-group-lg">
+            <%= label_tag :donation_item, nil, class: "sr-only" %>
+            <%= text_field_tag :donation_item, nil, placeholder: "Search by donation item", class: "form-control input-lg" %>
+            <span class="input-group-btn">
+              <%= submit_tag "Search", class: "btn btn-primary btn-lg" %>
+            </span>
+          </div>
+        <%end%>
+      </section>
     <br>
     <hr>
 
-    <%# push title to the left %>
-    <h2 class="col text-left" > Results </h2>
+    <%# push elements to the left %>
+    <h2 class="col text-left"> Results </h2>
 
-    <table class="table table-hover table-striped">     <%# make the style of the table aesthetic/easy to follow %>
-      <thead>
-        <tr>
-          <th scope="col">First name</th>
-          <th scope="col">Last name</th>
-          <th scope="col">Email</th>
-          <th scope="col">Donation</th>
-          <th scope="col">Type of Item(s)</th>
-          <th scope="col">Quantity</th>
-          <th colspan="3"></th>
-        </tr>
-      </thead>
+    <div class="col text-left">
+      <table class="table table-hover table-striped">     <%# make the style of the table aesthetic/easy to follow %>
+        <thead>
+          <tr>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Donation</th>
+            <th scope="col">Type of Item(s)</th>
+            <th scope="col">Quantity</th>
+            <th scope="col" colspan="3"></th>
+          </tr>
+        </thead>
 
-      <%# Create loop that iterates through each row in donation table to display all data %>
-      <tbody>
-        <% if not @donations.nil? %>
+        <%# Create loop that iterates through each row in donation table to display all data %>
+        <tbody>
+        <%# there was an issue with this loop format...might have to use Donation.all.each do |donation| %>
           <% @donations.each do |donation| %>
             <tr>
               <td><%= donation.first_name %></td>
@@ -71,11 +63,11 @@
               <td><%= link_to 'Delete', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
             </tr>
           <% end %>
-        <% end %>
-      </tbody>
-    </table>
-    
-    <br>
-    <br>
+        </tbody>
+      </table>
+      
+      <br>
+      <br>
+    </div>
   </div>
 </div>

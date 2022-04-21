@@ -5,35 +5,55 @@
 # donations to the homeless or those who are unable to afford them.
 # Filename: searches_controller.rb
 # Description: This file manages the options on the navigation bar
-# Last modified on: 4/20/22
+# Last modified on: 4/21/22
 
 class SearchesController < ApplicationController
-
-    # listing possible search parameters
-    # def index
-    #     # @donations = Donation.accessible_by(current_ability)
-    #     @donations = @donations.search(params[:first_name]) unless not params.has_key? :first_name
-    # end
-
-    # :first_name, :last_name, :email, :donation_item, :donation_type, :donation_quantity
-
-    # def index
-    #     @donations = Donation.where(nil) # creates an anonymous scope
-    #     @donations = @donations.filter_by_first_name(params[:first_name]) if params[:first_name].present?
-    # end
-  
+    
+    # listing all worklogs
     def index
-        @donations = Donation.search(params[:first_name])
+
+        ## @worklogs = Worklog.search(params[:q])
+        ## @worklogs = Worklog.all
+        
+        @donations = Donation.search(params[:donation_item])
+  
+        # @worklogs = Worklog.where(user_id: current_user.id)
+        # render "index"
+  
+        # @worklogs = Worklog.all
+        # render :index
+  
     end
-
-      # creating a new search
+  
+  
+    def new
+        @donation = Donation.new
+        render :new
+    end
+  
+    # creating a new search
     def create
-        respond_to do |format|
-            format.html { render :index, query: params[:query] }
+        @donation = Donation.new(worklog_params)
+        if @donation.save
+            redirect_to searches_path
+        else
+        render :new
         end
-    end 
-
+    end
+  
+    # showing the search
+    def show 
+      
+    end
+  
+    private
+    # Use callbacks to share common setup or constraints between actions.
+    def set_donation
+        @donation = Donation.find(params[:id])
+    end
+  
+    # Only allow a list of trusted parameters through.
     def donation_params
-        params.require(:donation).permit(:first_name, :last_name, :email, :donation_item, :donation_type, :donation_quantity)
+        params.require(:donation).permit(:first_name, :last_name, :email, :donation_item, :donation_type, :donation_quantity, :search)
     end
 end
