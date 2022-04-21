@@ -11,14 +11,16 @@
 // Automatically included in dashboard.css.
 // Source SASS (SCSS): https://sass-lang.com/
 body {
-    // background of each page
-    background-color: rgb(243, 254, 243) !important;
+    background-color: rgb(243, 254, 243) !important;        // background of each page
 }
-  
+
+.mainInfo { 
+    text-align: center; //align main title on home page
+}
+
 h2{
     margin: auto;
     width: 80%;
-    // border: 3px solid green;     //testing position of text
     padding: 10px;    
 }
 
