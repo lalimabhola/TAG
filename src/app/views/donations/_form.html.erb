@@ -11,37 +11,53 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= form.label :first_name %>
-    <%= form.text_field :first_name %>
+  <div class="formSpace">   <%# manages entire form %>
+    <div class="field">     <%# manages the boxes %>
+      <div class="field_label1">   <%# manages the specific label for each box %>
+        <%= form.label :first_name %>
+      </div>
+      <%= form.text_field :first_name, required: true, autofocus: true, placeholder: "ex. Jane" %>
+    </div>
+
+    <div class="field">
+      <div class="field_label2">
+        <%= form.label :last_name %>
+      </div>
+      <%= form.text_field :last_name, required: true, autofocus: true, placeholder: "ex. Doe" %>
+    </div>
+
+    <div class="field">
+      <div class="field_label3">
+        <%= form.label :email %>
+      </div>
+      <%= form.email_field :email, required: true, autofocus: true, placeholder: "name@example.com" %>    <%# specify "email" field type%>
+    </div>
+
+    <div class="field">
+      <div class="field_label4">
+        <%= form.label :donation_item %>
+      </div>
+      <%= form.text_field :donation_item, required: true, autofocus: true, placeholder: "ex. Hats"  %>
+    </div>
+
+    <div class="field">
+      <div class="field_label5">
+        <%= form.label :donation_type, 'Donation' %>
+      </div>
+      <%= form.select(:donation_type, Donation.all.collect { |d| [d.donation_item] }) %>
+      <%# <%= form.text_field :donation_type %>
+    </div>
+
+    <div class="field">
+      <div class="field_label6">
+        <%= form.label :donation_quantity %>
+      </div>
+      <%= form.number_field :donation_quantity, required: true, autofocus: true, placeholder: "ex. 5"  %>
+    </div>
   </div>
 
-  <div class="field">
-    <%= form.label :last_name %>
-    <%= form.text_field :last_name %>
-  </div>
-
-  <div class="field">
-    <%= form.label :email %>
-    <%= form.email_field :email %>    <%# specify "email" field type%>
-  </div>
-
-  <div class="field">
-    <%= form.label :donation_item %>
-    <%= form.text_field :donation_item %>
-  </div>
-
-  <div class="field">
-    <%= form.label :donation_type, 'Donation' %>
-    <%= form.select(:donation_type, Donation.all.collect { |d| [d.donation_item] }) %>
-    <%# <%= form.text_field :donation_type %>
-  </div>
-
-  <div class="field">
-    <%= form.label :donation_quantity %>
-    <%= form.number_field :donation_quantity %>
-  </div>
-
+  <br>
+  
   <div class="actions">
     <%= form.submit %>
   </div>

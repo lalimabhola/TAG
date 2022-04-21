@@ -7,11 +7,51 @@
 // Description: This file will add styles for the "Donations" table
 // Last modified on: 4/20/22
 
-
 // Place all the styles related to the donations controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
 
+
+//styles the text and boxes in the form
+.formSpace {
+    display: inline;
+    font-size: 1.25rem;
+    padding-top: 2%;    //space between title and top of first box
+}
+
+.formSpace .field {
+    padding-top: 1rem;      //spacing between boxes (from the top of each box to the next one)
+}
+
+.field_label1 {     //first name label
+    display: inline;
+    padding-right: 5rem;
+}
+
+.field_label2 {     //last name label
+    display: inline;
+    padding-right: 5.1rem;
+}
+
+.field_label3 {     //email label
+    display: inline;
+    padding-right: 7.75rem;
+}
+
+.field_label4 {     //donation item label
+    display: inline;
+    padding-right: 2.8rem;
+}
+
+.field_label5 {     //donation type label
+    display: inline;
+    padding-right: 5.7rem;
+}
+
+.field_label6 {     //donation quantity label
+    display: inline;
+    padding-right: 0.8rem;
+}
 
 // a:link { 
 //     text-decoration: none;
