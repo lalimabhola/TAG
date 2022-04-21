@@ -14,14 +14,14 @@
 
     <%# Manage search for donation %>
     <section class="search-form">
-
-    <%# Iterate through the donations and search for specific donation %>
       <section class="search-form">
+        <%# Iterate through the donations and search for specific donation %>      
         <%= form_for :donations, method: :get do |f| %>
           <div class="input-group input-group-lg">
             <%= label_tag :donation_item, nil, class: "sr-only" %>
             <%= text_field_tag :donation_item, nil, placeholder: "Search by donation item", class: "form-control input-lg" %>
             <span class="input-group-btn">
+              <%# submit_tag is the name of the button that searches for the query %>
               <%= submit_tag "Search", class: "btn btn-primary btn-lg" %>
             </span>
           </div>
@@ -47,9 +47,10 @@
           </tr>
         </thead>
 
-        <%# Create loop that iterates through each row in donation table to display all data %>
+        <%# Creates loop that iterates through each row in donation table to display all data %>
+        <%# loop directly taken from index.html.erb in donations folder %>
         <tbody>
-        <%# there was an issue with this loop format...might have to use Donation.all.each do |donation| %>
+        <%# there was an issue with this loop format at times...might have to use Donation.all.each do |donation| %>
           <% @donations.each do |donation| %>
             <tr>
               <td><%= donation.first_name %></td>

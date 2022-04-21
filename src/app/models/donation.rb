@@ -8,12 +8,11 @@
 # Last modified on: 4/21/22
 
 class Donation < ApplicationRecord
-  
-    class << self
-        def search(query)
+    class << self   # shorthand way of writing two methods
+        def search(query)       # performs a case-sensitive search
             rel = order("id")
-            if query.present?
-              rel = rel.where("donation_item LIKE?", "%#{query}%")
+            if query.present?       # if the query is present then show display on screen
+              rel = rel.where("donation_item LIKE?", "%#{query}%")      # search query is donation item
             end
             rel
         end

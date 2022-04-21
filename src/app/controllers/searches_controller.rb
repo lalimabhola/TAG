@@ -9,23 +9,12 @@
 
 class SearchesController < ApplicationController
     
-    # listing all worklogs
+    # lists all donations
     def index
-
-        ## @worklogs = Worklog.search(params[:q])
-        ## @worklogs = Worklog.all
-        
         @donations = Donation.search(params[:donation_item])
-  
-        # @worklogs = Worklog.where(user_id: current_user.id)
-        # render "index"
-  
-        # @worklogs = Worklog.all
-        # render :index
-  
     end
   
-  
+    # starts a new donation
     def new
         @donation = Donation.new
         render :new
@@ -33,19 +22,14 @@ class SearchesController < ApplicationController
   
     # creating a new search
     def create
-        @donation = Donation.new(worklog_params)
+        @donation = Donation.new(donation_params)   # can use any variable from donation_params method to search by
         if @donation.save
-            redirect_to searches_path
+            redirect_to searches_path       # navigate to index.html.erb for searches folder
         else
         render :new
         end
     end
-  
-    # showing the search
-    def show 
-      
-    end
-  
+
     private
     # Use callbacks to share common setup or constraints between actions.
     def set_donation
