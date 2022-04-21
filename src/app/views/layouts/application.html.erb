@@ -29,6 +29,7 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    
     <%# Navigation Bar %>
     <nav class="navbar navbar-expand-md navbar-light bg-TAG fixed-top">
       <%= link_to 'TAG', dashboard_dash_path, class: "navbar-brand text-white" %>
@@ -37,8 +38,8 @@
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <% if user_signed_in? %>
 
+      <% if user_signed_in? %>
         <ul class="navbar-nav mr-auto">
           <li class="nav-item">
           <%# links to the Home page %>
@@ -61,22 +62,14 @@
           <% end %>
           </li>
 
-
-          <%# links to the View and Search page %>
+          <%# links to the Search page %>
           <li class="nav-item">
           <%= link_to_unless_current("Search Donations", searches_path, { class: "nav-link text-white" }) do %>
             <a class="nav-link text-white" aria-current="page" href="#">Search Donations</a>
           <% end %>
           </li>
-
-          <%# links to the Delete donation page %>
-          <%# <li class="nav-item"> %>
-          <%# <%= link_to_unless_current("Delete", dashboard_delete_data_path, { class: "nav-link text-white" }) do %>
-            <%# <a class="nav-link text-white" aria-current="page" href="#">Delete</a> %>
-          <%# <% end %>
-          <%# </li> %>
-
         </ul>
+
         <ul class="navbar-nav">
           <%# If user, show account, else sign in %>
             <li class="nav-item dropdown">
@@ -94,10 +87,6 @@
                 <%# Devise requires that the logout command be sent using the 'delete' HTTP verb (method) %>
                 <%= link_to "Logout", destroy_user_session_path, class: "dropdown-item", method: :delete %>
               </div>
-            </li>
-          <% else %>
-            <li class="nav-item">
-              <%= button_to "Log in", new_user_session_path, class: "btn btn-dark" %>
             </li>
           <% end %>
         </ul>
