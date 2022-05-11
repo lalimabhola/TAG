@@ -1,0 +1,74 @@
+<%# Project name: TAG (Track and Give) %>
+<%# Description: This website will track donations and related information  %>
+<%# to allow nonprofits to better streamline their process of reallocating %>
+<%# donations to other distribution centers, who in turn give these  %>
+<%# donations to the homeless or those who are unable to afford them. %>
+<%# Filename: index.html.erb %>
+<%# Description: This file will include functions for the search page %>
+<%# Last modified on: 4/21/22 %>
+
+<div class="row">
+  <div class="col text-center">   <%# center text %>
+    <h1 style="padding-top: 2rem"> Search Donations </h1>
+    <br/>
+
+    <%# Manage search for donation %>
+    <section class="search-form">
+      <section class="search-form">
+        <%# Iterate through the donations and search for specific donation %>      
+        <%= form_for :donations, method: :get do |f| %>
+          <div class="input-group input-group-lg">
+            <%= label_tag :donation_item, nil, class: "sr-only" %>
+            <%= text_field_tag :donation_item, nil, placeholder: "Search by donation item", class: "form-control input-lg" %>
+            <span class="input-group-btn">
+              <%# submit_tag is the name of the button that searches for the query %>
+              <%= submit_tag "Search", class: "btn btn-primary btn-lg" %>
+            </span>
+          </div>
+        <%end%>
+      </section>
+    <br>
+    <hr>
+
+    <%# push elements to the left %>
+    <h2 class="col text-left"> Results </h2>
+
+    <div class="col text-left">
+      <table class="table table-hover table-striped">     <%# make the style of the table aesthetic/easy to follow %>
+        <thead>
+          <tr>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Donation</th>
+            <th scope="col">Type of Item(s)</th>
+            <th scope="col">Quantity</th>
+            <th scope="col" colspan="3"></th>
+          </tr>
+        </thead>
+
+        <%# Creates loop that iterates through each row in donation table to display all data %>
+        <%# loop directly taken from index.html.erb in donations folder %>
+        <tbody>
+        <%# there was an issue with this loop format at times...might have to use Donation.all.each do |donation| %>
+          <% @donations.each do |donation| %>
+            <tr>
+              <td><%= donation.first_name %></td>
+              <td><%= donation.last_name %></td>
+              <td><%= donation.email %></td>
+              <td><%= donation.donation_item %></td>
+              <td><%= donation.donation_type %></td>
+              <td><%= donation.donation_quantity %></td>
+              <td><%= link_to 'Show', donation %></td>
+              <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
+              <td><%= link_to 'Delete', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      
+      <br>
+      <br>
+    </div>
+  </div>
+</div>

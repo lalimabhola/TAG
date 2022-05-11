@@ -1,19 +1,30 @@
-// Project name: Assignment 2: TAG
+// Project name: TAG (Track and Give)
 // Description: This website will track donations and related information 
 // to allow nonprofits to better streamline their process of reallocating
 // donations to other distribution centers, who in turn give these 
 // donations to the homeless or those who are unable to afford them.
 // Filename: dashboard.scss
-// Description: This file will add style for dashboard
-// Last modified on: 3/23/22
+// Description: This file will add styles for the home page
+// Last modified on: 4/21/22
 
 // Styles related to dashboard controller are here
-// Automatically included in application.css.
+// Automatically included in dashboard.css.
 // Source SASS (SCSS): https://sass-lang.com/
 body {
-    background-color: rgb(255, 255, 224) !important;
-  }
-  
+    background-color: rgb(243, 254, 243) !important;        // background of each page
+    padding-top: 1rem;
+}
+
+.mainInfo { 
+    text-align: center; //align main title on home page
+}
+
+h2{
+    margin: auto;
+    width: 80%;
+    padding: 0.5rem;    
+}
+
 h3 {
     font-size: 2em;
     font-weight: bold;
@@ -23,88 +34,41 @@ a {
     color: #fff;
 }
   
-.container {
-    width:100% !important;
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
-}
-  
 .dash-box {
     position: relative;
     color: #fff;
-    padding-top:8%;
+    padding-top:10%;
     padding-left: 5%;
     padding-right: 5%;
     padding-bottom: 10%;
     margin: 10% 0;
+    font-size: 1.5rem;        // font size for buttons on landing page after logging in
 }
-  
-.dash-box:hover {
-    text-decoration: none;
-    color: #f3f3f3;
-}
-  
-.dash-box .inner {
-    padding-top: 2%;
-    padding-left: 5%;
-    padding-right: 5%;
-    padding-bottom: 0;
-}
-  
-// Set values to zero so it doesn't default to auto
-.dash-box h3 {
-    margin-top: 0;
-    margin-left: 0;
-    margin-right: 0;
-    margin-bottom: 4%;
-    white-space: nowrap;
-    padding: 0;
-    font-weight: 750 !important;
-}
-  
-.card-box p {
-    font-size: 1.4em;
-}
-  
+
+// controls styles for buttons on home page
 .dash-box .dash-box-footer {
     position: absolute;
-    left: 0;
+    left: 50%;  //50% from the left of the page
+    right: 50%; //50% from the right of the page
     bottom: 0;
     text-align: center;
     text-decoration: none;
-    background: rgba(0, 0, 0, 0.6);
+    background: #199dd6;
     color: #fff;
     width: 100%;
-    padding: 2% 0;
+
+    //padding of buttons on home page
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
-// controls change in color when hovering
-.dash-box:hover .dash-box-footer {
-    background: rgba(0, 0, 0, 0.8);
-    color: #f3f3f3;
-}
-
-// // controls button design
-// .bg-blue {
-//     background-color: rgba(94, 94, 255, 0.9) !important;
-// }
-
-// .bg-green {
-//     background-color: rgba(178, 255, 220, 0.9) !important;
-// }
-
-// .bg-orange {
-//     background-color: rgba(255, 218, 159, 0.9) !important;
-// }
-
-// .bg-grey {
-//     background-color: rgba(255, 168, 168, 0.9) !important;
-// }
-  
-.mt-10 {
-    margin-top: 10% !important;
+// controls change in buttons on home page when hovering
+.dash-box:hover .dash-box-footer:hover {
+    background: rgb(1, 68, 127);
+    color: #bff4ff !important; 
+    padding: 1.15rem;    //padding upon hover over buttons
 }
   
 .outline {

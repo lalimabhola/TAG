@@ -1,0 +1,69 @@
+<%= form_with(model: donation, local: true) do |form| %>
+  <% if donation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(donation.errors.count, "error") %> prohibited this donation from being saved:</h2>
+
+      <ul>
+        <% donation.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="formSpace">   <%# manages entire form %>
+    <div class="field">     <%# manages the boxes %>
+      <div class="field_label1">   <%# manages the specific label for each box %>
+        <%= form.label :first_name %>
+      </div>
+      <%# use placeholders to demonstrate sample query %>
+      <%# use required = true to require all boxes to be filled %>
+      <%= form.text_field :first_name, required: true, autofocus: true, placeholder: "ex. Jane" %>
+    </div>
+
+    <div class="field">
+      <div class="field_label2">
+        <%= form.label :last_name %>
+      </div>
+      <%= form.text_field :last_name, required: true, autofocus: true, placeholder: "ex. Doe" %>
+    </div>
+
+    <div class="field">
+      <div class="field_label3">
+        <%= form.label :email %>
+      </div>
+      <%= form.email_field :email, required: true, autofocus: true, placeholder: "name@example.com" %>    <%# specify "email" field type%>
+    </div>
+
+    <div class="field">
+      <div class="field_label4">
+        <%= form.label :donation_item, 'Donation' %>
+      </div>
+      <%= form.text_field :donation_item, required: true, autofocus: true, placeholder: "ex. Hats" %>
+    </div>
+
+    <div class="field">
+      <div class="field_label5">
+        <%= form.label :donation_type, 'Type of Item(s)' %>
+      </div>
+      <%# create dropdown menu %>
+      <div class="drop-down">
+        <%= form.select(:donation_type, options_for_select([['Clothing', 'Clothing'], ['Food', 'Food'], ['Books', 'Books'], ['Toiletries', 'Toiletries'], ['Baby Items', 'Baby Items'], ['Pet Items', 'Pet Items'], ['Other', 'Other']])) %>
+      </div>
+
+    </div>
+
+    <div class="field">
+      <div class="field_label6">
+        <%= form.label :donation_quantity, 'Quantity' %>
+      </div>
+      <%= form.number_field :donation_quantity, required: true, autofocus: true, placeholder: "ex. 5" %>
+    </div>
+  </div>
+
+  <br>
+  
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

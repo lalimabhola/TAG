@@ -1,11 +1,11 @@
-// Project name: Assignment 2: TAG
+// Project name: TAG (Track and Give)
 // Description: This website will track donations and related information 
 // to allow nonprofits to better streamline their process of reallocating
 // donations to other distribution centers, who in turn give these 
 // donations to the homeless or those who are unable to afford them.
 // Filename: application.scss
-// Description: This file will add styles for dashboard
-// Last modified on: 3/23/22
+// Description: This file will add global styles for the application
+// Last modified on: 4/20/22
 
 
 /*
@@ -27,19 +27,25 @@
 // Commented out because they refused to behave properly
 // will just use the CDN
 //$fa-font-path: '@fortawesome/fontawesome-free/webfonts';
-//@import '@fortawesome/fontawesome-free/scss/fontawesome';
-//@import '@fortawesome/fontawesome-free/scss/regular';
-//@import '@fortawesome/fontawesome-free/scss/solid';
-//@import '@fortawesome/fontawesome-free/scss/brands';
-//@import 'bootstrap/scss/bootstrap';
+// @import '@fortawesome/fontawesome-free/scss/fontawesome';
+// @import '@fortawesome/fontawesome-free/scss/regular';
+// @import '@fortawesome/fontawesome-free/scss/solid';
+// @import '@fortawesome/fontawesome-free/scss/brands';
+// @import 'bootstrap/scss/bootstrap';
+
+// @import 'font-awesome';
 
 // Add any GLOBAl SCSS/CSS to this file for your project. If it is specific
 // to a page, use the individual SCSS file that is generated for the controller
 // The comments at the top of the file, specifically require_tree .
 // and require_self *cannot* be removed.
 
+h1 {
+    padding-top: 2rem;
+}
+
 .bg-TAG {
-    background-color: #0c7bdc !important;
+    background-color: #199dd6 !important;
 }
   
 .overlay {

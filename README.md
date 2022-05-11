@@ -16,25 +16,30 @@ The three main functions of my program are searching within the data, adding dat
 
 ## Use Case Diagram
 
-![UseCaseDiagram](https://github.com/lalimabhola/TAG/blob/prototype2/docs/Use_case_diagram.png)
+![UseCaseDiagram](https://github.com/lalimabhola/TAG/blob/prototype3/docs/use_case_diagram.png)
 
 ## Use Case Descriptions
 
-![logInAndSearch](https://github.com/lalimabhola/TAG/blob/prototype2/docs/Log_and_search.png)
+![logInAndSearch](https://github.com/lalimabhola/TAG/blob/prototype3/docs/Log_and_search.png)
 
-![AddAndDelete](https://github.com/lalimabhola/TAG/blob/prototype2/docs/Add_and_delete_data.png)
+![AddAndDelete](https://github.com/lalimabhola/TAG/blob/prototype3/docs/Add_and_delete_data.png)
 
 ## Design Class Diagram
 
-![Design Class Diagram](https://github.com/lalimabhola/TAG/blob/prototype2/docs/Design_class_diagram.png)
+![Design Class Diagram](https://github.com/lalimabhola/TAG/blob/prototype3/docs/Design_class_diagram.png)
 
 ## System Sequence Diagrams
 
-![SystemSequenceDiagrams](https://github.com/lalimabhola/TAG/blob/prototype2/docs/System_sequence_diagrams.png)
+![SystemSequenceDiagrams](https://github.com/lalimabhola/TAG/blob/prototype3/docs/System_sequence_diagrams.png)
 
 ## Statechart
 
-![Statechart](https://github.com/lalimabhola/TAG/blob/prototype2/docs/State_chart.png)
+![Statechart](https://github.com/lalimabhola/TAG/blob/prototype3/docs/State_chart.png)
+
+
+## Opensource Maintenance and Communication
+[Guidelines for opensource maintenance and communication](https://github.com/lalimabhola/TAG/blob/prototype3/MAINTAIN.md)
+
 
 ### Welcome! To learn how to get started with contributing to this project, visit the resources below. These files can also be found in the `docs/` directory:
 
