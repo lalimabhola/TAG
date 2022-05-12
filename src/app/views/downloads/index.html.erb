@@ -1,0 +1,58 @@
+<%# Project name: TAG (Track and Give) %>
+<%# Description: This website will track donations and related information  %>
+<%# to allow nonprofits to better streamline their process of reallocating %>
+<%# donations to other distribution centers, who in turn give these  %>
+<%# donations to the homeless or those who are unable to afford them. %>
+<%# Filename: index.html.erb %>
+<%# Description: This file will include functions for the view and download page %>
+<%# Last modified on: 5/12/22 %>
+
+
+<div class="row">
+  <div class="col text-center">   <%# center text %>
+    <h1 style="padding-top: 2rem"> View All Donations & Download Data </h1>
+    <br>
+
+    <div class="col text-left">   <%# push text to the left %>
+      <table class="table table-hover table-striped">     <%# make the style of the table aesthetic/easy to follow %>
+        <thead>
+          <tr>
+            <th scope="col">First name</th>
+            <th scope="col">Last name</th>
+            <th scope="col">Email</th>
+            <th scope="col">Donation</th>
+            <th scope="col">Type of Item(s)</th>
+            <th scope="col">Quantity</th>
+            <th scope="col" colspan="3"></th>
+          </tr>
+        </thead>
+
+        <%# Creates loop that iterates through each row in donation table to display all data %>
+        <%# loop directly taken from index.html.erb in donations folder %>
+        <tbody>
+        <%# there was an issue with this loop format at times...might have to use Donation.all.each do |donation| %>
+          <% @donations.each do |donation| %>
+            <tr>
+              <td><%= donation.first_name %></td>
+              <td><%= donation.last_name %></td>
+              <td><%= donation.email %></td>
+              <td><%= donation.donation_item %></td>
+              <td><%= donation.donation_type %></td>
+              <td><%= donation.donation_quantity %></td>
+              <td><%= link_to 'Show', donation %></td>
+              <td><%= link_to 'Edit', edit_donation_path(donation) %></td>
+              <td><%= link_to 'Delete', donation, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+      
+      <br>
+      <br>
+
+      <%# Create button for downloading data %>
+      <%= link_to "Download Log", downloads_path(format: "csv"), class: "btn btn-primary btn-lg" %>
+
+    </div>
+  </div>
+</div>
