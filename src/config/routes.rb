@@ -5,7 +5,7 @@
 # donations to the homeless or those who are unable to afford them.
 # Filename: routes.rb
 # Description: This file will add the user options to the dashboard/dash location
-# Last modified on: 4/20/22
+# Last modified on: 5/12/22
 
 # frozen_string_literal: true
 
@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   # use this format for folder locations
   resources :donations    # finds the "donations" folder
   resources :searches     # finds the "searches" folder
+
+  resources :downloads     # finds the "download" folder
 
   get 'dashboard/dash'
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
