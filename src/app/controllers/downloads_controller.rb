@@ -1,0 +1,21 @@
+# Project name: TAG (Track and Give)
+# Description: This website will track donations and related information 
+# to allow nonprofits to better streamline their process of reallocating
+# donations to other distribution centers, who in turn give these
+# donations to the homeless or those who are unable to afford them.
+# Filename: download_controller.rb
+# Description: This file manages the options on the navigation bar
+# Last modified on: 5/12/22
+
+class DownloadsController < ApplicationController
+
+  # lists all donations
+  def index
+    @donations = Donation.all
+        
+    respond_to do |format|
+      format.html
+      format.csv { send_data @donations.to_csv, filename: "donations-#{Date.today}.csv" }
+    end
+  end
+end
